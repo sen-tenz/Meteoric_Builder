@@ -32,7 +32,7 @@ jobs:
         repository: ${{ env.REPO }}
         ref: ${{ env.REPO_BRANCH }}
         path: ${{ env.RELEASE_NAME }}
-        submodules: true
+        submodules: false
 
     - name: "Set Last Commit variables"
       id: vars
@@ -44,6 +44,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: sen-tenz/AnyKernel3
+        ref: meteoric
         path: zipper
 
     - name: Pre-build Message to Telegram
