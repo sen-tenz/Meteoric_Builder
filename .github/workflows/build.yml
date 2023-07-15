@@ -32,7 +32,7 @@ jobs:
         repository: ${{ env.REPO }}
         ref: ${{ env.REPO_BRANCH }}
         path: ${{ env.RELEASE_NAME }}
-        submodules: false
+        submodules: true
 
     - name: "Set Last Commit variables"
       id: vars
